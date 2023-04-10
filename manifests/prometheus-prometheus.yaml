@@ -65,5 +65,5 @@ spec:
         resources:
           requests:
             storage: 100Gi
-        storageClassName: gp3
+        storageClassName: gp2
   version: 2.43.0
