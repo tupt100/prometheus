@@ -44,8 +44,8 @@ spec:
   replicas: 1
   resources:
     requests:
-      memory: 400Mi
-  retention: 30d
+      memory: 200Mi
+  retention: 10d
   ruleNamespaceSelector: {}
   ruleSelector: {}
   securityContext:
@@ -54,7 +54,9 @@ spec:
     runAsUser: 1000
   serviceAccountName: prometheus-k8s
   serviceMonitorNamespaceSelector: {}
-  serviceMonitorSelector: {}
+  serviceMonitorSelector:
+   matchLabels:
+    serviceMonitorSelector: prometheus  # Lable cua ServiceMonitor
   storage:
     volumeClaimTemplate:
       apiVersion: v1
@@ -64,6 +66,6 @@ spec:
         - ReadWriteOnce
         resources:
           requests:
-            storage: 100Gi
+            storage: 50Gi
         storageClassName: gp2
   version: 2.43.0
