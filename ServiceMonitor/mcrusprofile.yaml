@@ -10,7 +10,7 @@ spec:
   endpoints:
     - interval: 30s
       path: /management/prometheus
-      targetPort: 8082
+      port: http    # port name cua SVC
   namespaceSelector:
     any: true
   selector:
