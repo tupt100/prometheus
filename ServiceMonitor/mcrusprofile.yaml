@@ -12,7 +12,9 @@ spec:
       path: /management/prometheus
       port: http    # port name cua SVC
   namespaceSelector:
-    any: true
+  #  any: true
+     matchNames:
+     - iface-uat  
   selector:
     matchLabels:
       app: mcrusprofile
