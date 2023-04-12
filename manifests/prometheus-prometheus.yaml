@@ -56,7 +56,7 @@ spec:
   serviceMonitorNamespaceSelector: {}
   serviceMonitorSelector:
    matchLabels:
-    serviceMonitorSelector: prometheus  # Lable cua ServiceMonitor
+    serviceMonitorSelector: prometheus  # Label cua ServiceMonitor
   storage:
     volumeClaimTemplate:
       apiVersion: v1
